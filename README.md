@@ -21,7 +21,7 @@ Install from npm:
         // Take SimpleSendGridAdapter for example, you can use any other adapter instead
         adapter: SimpleSendGridAdapter({
           apiKey: 'sendgridApiKey',
-          fromAddress: 'fromEmailAddress',
+          from: 'fromEmailAddress',
         }),
         template: {
           verification: {
