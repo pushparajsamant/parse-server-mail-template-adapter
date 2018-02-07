@@ -5,7 +5,7 @@ Adapter for customizing template adapter to send HTML email using sendgrid for P
 
 Install from npm:
     
-    npm install parse-server-mail-template-adapter --save
+    npm install https://github.com/pushparajsamant/parse-server-mail-template-adapter.git --save
     
 
 ## Configuration
