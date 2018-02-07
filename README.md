@@ -1,5 +1,5 @@
-# parse-server-mail-template-adapter
-Adapter for customizing email template of parse-server
+# parse-server-mail-template-sendgrid-adapter
+Adapter for customizing template adapter to send HTML email using sendgrid for Parse Server
 
 ## Installation
 
@@ -12,7 +12,7 @@ Install from npm:
     var ParseServer = require('parse-server').ParseServer;
     var SimpleSendGridAdapter = require('parse-server-sendgrid-adapter');
     var MailTemplateAdapter = require('parse-server-mail-template-adapter');
-
+    
     var api = new ParseServer({
       // ... Other necessary parameters ...
       appName: 'myAppName',
@@ -28,7 +28,7 @@ Install from npm:
             subject: "verification subject",
             // Choose one in body and bodyFile, if both setted then body used
             body: "verfication body", 
-            bodyFile: "./VerificationEmailBody.txt",
+            bodyFile: "./VerificationEmailBody.html",
           },
           resetPassword: {  // Same as verification
             subject: "reset password subject",
