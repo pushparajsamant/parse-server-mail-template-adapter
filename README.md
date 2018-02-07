@@ -1,5 +1,5 @@
 # parse-server-mail-template-sendgrid-adapter
-Adapter for customizing template adapter to send HTML email using sendgrid for Parse Server
+Adapter for customizing the template adapter to send HTML email using sendgrid for Parse Server
 
 ## Installation
 
