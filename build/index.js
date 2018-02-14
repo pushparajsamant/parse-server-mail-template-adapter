@@ -99,11 +99,28 @@ var MailTemplateAdapter = function MailTemplateAdapter(mailOptions) {
       });
     };
   }
+  var sendMail = function sendMail(_ref) {
+    var to = _ref.to;
+    var subject = _ref.subject;
+    var text = _ref.text;
 
+    return new Promise(function (resolve, reject) {
+      sendgrid.send({
+        from: mailOptions.fromAddress,
+        to: to,
+        subject: subject,
+        text: text
+      }, function (err, json) {
+        if (err) {
+          reject(err);
+        }
+        resolve(json);
+      });
+    });
+  };
   return Object.freeze({
     sendVerificationEmail: customeized.sendVerificationEmail,
-    sendPasswordResetEmail: customeized.sendPasswordResetEmail,
-    sendMail: customeized.sendVerificationEmail
+    sendMail: sendMail
   });
 };
 
